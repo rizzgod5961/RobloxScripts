@@ -4,16 +4,16 @@
 ### Script
 ```lua
 getgenv().Config = {
-	["Credits"] = {
+	["Credits"] = { --: Credits, !Don't Change!
 		["Made by"] = {"desastre#5961", "github.com/rizzgod5961"}
 	}
-	SellItems = {
+	SellItems = { --: Add or remove Items from here if you want to sell them.
 		"Arrow";
 		"StoneMask";
 		"SteelBall";
 		"Locacaca";
 	},
-	Items = {
+	Items = { --: Add or remove Items from here if you want to auto farm them.
 		"Arrow";
 		"Stone Mask";
 		"Steel Ball";
