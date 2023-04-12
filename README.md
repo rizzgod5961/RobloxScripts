@@ -6,7 +6,7 @@
 getgenv().Config = {
 	["Credits"] = { --: Credits, !Don't Change!
 		["Made by"] = {"desastre#5961", "github.com/rizzgod5961"}
-	}
+	},
 	SellItems = { --: Add or remove Items from here if you want to sell them.
 		"Arrow";
 		"StoneMask";
