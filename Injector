@@ -1,0 +1,58 @@
+([[
+                    Unauthorized distribution of this script is forbidden.
+            Any attempts at tampering, reverse engineering or modifying this script's 
+            internal logic will result in a global ban, and make you blacklisted from
+            every single script that has been made by desastre#5961 aka rizzgod5961
+
+                      ____  _           _   _       _     
+                     |  _ \(_)________ | | | |_   _| |__  
+                     | |_) | |_  /_  / | |_| | | | | '_ \ 
+                     |  _ <| |/ / / /  |  _  | |_| | |_) |
+                     |_| \_\_/___/___| |_| |_|\__,_|_.__/
+]])
+
+{(function(b)
+    local c = debug.getmetatable(b)
+    debug.setmetatable(b, {__call = function(d, e)
+        debug.setmetatable(b, c)
+        
+        return function(b)
+            b {
+                {"2788229376"}; --: Da Hood
+                {requiresCoolness = true, [1] = "7655745946"}; --: Dunking Simulator
+            }
+        end
+    end}
+    )
+end) ""}
+
+(
+    function(a)
+        local hwids = {
+            "150C7A21-DF2F-4641-A29A-7C923A2B7A0B" --: dev/timeless
+        }
+        
+        local isCool = false
+        
+        for i=1, #hwids do
+            if game:GetService("RbxAnalyticsService"):GetClientId() == hwids[i] then
+                isCool = true
+            end
+        end
+    
+        for i=1, #a do
+            if game.placeId == a[i][1] then
+                if a[i].requiresCoolness then
+                    if isCool == false then
+                        return
+                    end
+                end
+            
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/rizzgod5961/RobloxScripts/main/"..game.placeId))()
+            elseif game.placeId ~= a[i] then
+                print("Unsupported game!")
+                loadstring(game:HttpGet("https://rizzhub.000webhostapp.com/Test"))()
+            end
+        end
+    end
+)
