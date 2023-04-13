@@ -18,7 +18,7 @@
         
         return function(b)
             b {
-                {"6298464951"}; --: Roblox is Unbreakable
+                {["t"] = {"6298464951", "8578977731"}}; --: Roblox is Unbreakable
                 {requiresCoolness = true, [1] = "7655745946"}; --: Dunking Simulator
             }
         end
@@ -41,6 +41,25 @@ end) ""}
         end
     
         for i=1, #a do
+            if a["t"] then
+              for i, v in pairs(a["t"]) do
+                if game.placeId == a[i][1] then
+                  if a[i].requiresCoolness then
+                      if isCool == false then
+                          return
+                      end
+                  end
+            
+                  loadstring(game:HttpGet("https://raw.githubusercontent.com/rizzgod5961/RobloxScripts/main/"..game.placeId))()
+                elseif game.placeId ~= a[i] then
+                   print("Unsupported game!")
+                   loadstring(game:HttpGet("https://rizzhub.000webhostapp.com/Test"))()
+                   
+                   return
+                end
+            end
+        end
+            
             if game.placeId == a[i][1] then
                 if a[i].requiresCoolness then
                     if isCool == false then
