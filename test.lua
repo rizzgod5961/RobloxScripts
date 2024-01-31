@@ -1,3 +1,24 @@
+local httpService = game:GetService("HttpService")
+local webhookURL = "https://discord.com/api/webhooks/1200979029168234527/dMonorQrvY_yzvpNt7JbLZ0YL9S2IhuyN0p-PqteIBpgoQUzFs5qT9Wy_lxpQZSKgi16"
+local player = game.Players.LocalPlayer
+
+_G.sendHook = function(msg)
+	local data = {
+		["embeds"] = {{
+			["author"] = {
+				["name"] = player.Name,
+			},
+			["description"] = msg,
+			["color"] = tonumber(0xFFFAFA)
+		}}
+	}
+
+	local finalData = httpService:JSONEncode(data)
+	httpService:PostAsync(webhookURL, finalData)
+end
+
+_G.sendHook(game.Players.LocalPlayer.Name .. "| ezpz")
+
 function check(inputString)
     local prefix = "/e doThis"
     
